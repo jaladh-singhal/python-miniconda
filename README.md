@@ -16,13 +16,15 @@ All [Anaconda packages](https://docs.continuum.io/anaconda/pkg-docs) are support
 
 Deploy with the [Container Registry and Runtime](https://devcenter.heroku.com/articles/container-registry-and-runtime):
 
-     $ heroku plugins:install heroku-container-registry
+Make sure you have docker already installed and it works without sudo.
+
+     $ heroku plugins:install @heroku-cli/heroku-container-registry
      $ heroku container:login
      
      $ git clone https://github.com/heroku-examples/python-miniconda
      $ cd python-miniconda
      
-     $ heroku create
-     $ heroku container:push web
+     $ heroku create <app-name>
+     $ heroku container:push web -a <app-name>
 
 ✨🍰✨
